@@ -7,11 +7,21 @@
     <title>Document</title>
     <style>
         body{
-            background-color: black;
+            background-color: #000;
             color:#fff;
         }
         #firstLottie{
             width: 50vw;
+            margin-inline: auto;
+        }
+        #secondLottie{
+            background-image: url("jolle.jpg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+        #MyContainerId{
+            width:1280px;
             margin-inline: auto;
         }
     </style>
@@ -22,10 +32,10 @@
     <h3>basic animation</h3>
     <lottie-player id="firstLottie" src="Comp 1.json" background="#ca1" style="width: 500x; height: 300px;" autoplay
         loop></lottie-player>
-<h3>Click to toggle animation</h3>
+<h3>Click to toggle animation (with image as part of file)</h3>
 <lottie-player id="thirdLottie" src="bgr-img.json" background="transparent"
     style="width: 1280x; height: 720px;"></lottie-player>
-<h3>animation on scroll</h3>
+<h3>animation on scroll (with background image)</h3>
 <div id="MyContainerId">
 <lottie-player id="secondLottie" src="textanimation.json" background="transparent" style="width: 1280x; height: 720px;" autoplay loop></lottie-player></div>
 <p>fyld</p>
@@ -92,11 +102,7 @@
                         player: '#secondLottie',
                         mode: "scroll",
                         actions: [
-                             {
-                                visibility: [0, 0.3],
-                                type: "stop",
-                                frames: [0]
-                            },
+                      
                             {
                                 visibility: [0.3, 1.0],
                                 type: "seek",
