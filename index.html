@@ -8,32 +8,102 @@
     <style>
         body{
             background-color: black;
+            color:#fff;
         }
         #firstLottie{
             width: 50vw;
+            margin-inline: auto;
         }
     </style>
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <script src="https://unpkg.com/@lottiefiles/lottie-interactivity@latest/dist/lottie-interactivity.min.js"></script>
 </head>
 <body>
-   
-<lottie-player id="secondLottie" src="textanimation.json" background="transparent" style="width: 1280x; height: 720px;" autoplay loop></lottie-player>
-<lottie-player id="thirdLottie" src="bgr-img.json" background="transparent" style="width: 1280x; height: 720px;" autoplay loop></lottie-player>
-<lottie-player id="firstLottie" src="Comp 1.json" background="#ca1" style="width: 500x; height: 300px;"></lottie-player>
+    <h3>basic animation</h3>
+    <lottie-player id="firstLottie" src="Comp 1.json" background="#ca1" style="width: 500x; height: 300px;" autoplay
+        loop></lottie-player>
+<h3>Click to toggle animation</h3>
+<lottie-player id="thirdLottie" src="bgr-img.json" background="transparent"
+    style="width: 1280x; height: 720px;"></lottie-player>
+<h3>animation on scroll</h3>
+<div id="MyContainerId">
+<lottie-player id="secondLottie" src="textanimation.json" background="transparent" style="width: 1280x; height: 720px;" autoplay loop></lottie-player></div>
+<p>fyld</p>
+<p>fyld</p>
+<p>fyld</p>
+<p>fyld</p>
+<p>fyld</p>
+<p>fyld</p>
+<p>fyld</p>
+<p>fyld</p>
+<p>fyld</p>
+<p>fyld</p>
+<p>fyld</p>
+<p>fyld</p>
+<p>fyld</p>
+<p>fyld</p>
+<p>fyld</p>
+<p>fyld</p>
+<p>fyld</p>
+<p>fyld</p>
+<p>fyld</p>
+<p>fyld</p>
+<p>fyld</p>
+<p>fyld</p>
+<p>fyld</p>
+<p>fyld</p>
+<p>fyld</p>
+<p>fyld</p>
+<p>fyld</p>
+<p>fyld</p>
+<p>fyld</p>
+<p>fyld</p>
+<p>fyld</p>
+<p>fyld</p>
+<p>fyld</p>
+<p>fyld</p>
+<p>fyld</p>
+<p>fyld</p>
+<p>fyld</p>
+<p>fyld</p>
+<p>fyld</p>
+<p>fyld</p>
+<p>fyld</p>
+<p>fyld</p>
+<p>fyld</p>
+<p>fyld</p>
+
+
+
       
         <script>
                LottieInteractivity.create({
-                    player: '#firstLottie',
+                    player: '#thirdLottie',
                     mode: "cursor",
                     actions: [
                         {
                             visibility: [0, 1.0],
-                            type: "click",
+                            type: "toggle",
                             forceFlag: false
                         }
                     ]
                 });
+                 LottieInteractivity.create({
+                        player: '#secondLottie',
+                        mode: "scroll",
+                        actions: [
+                             {
+                                visibility: [0, 0.3],
+                                type: "stop",
+                                frames: [0]
+                            },
+                            {
+                                visibility: [0.3, 1.0],
+                                type: "seek",
+                                frames: [0, 100]
+                            }
+                        ]
+                    });
         </script>
 </body>
 </html>
