@@ -9,58 +9,28 @@
         body{
             background-color: black;
         }
+        #firstLottie{
+            width: 50vw;
+        }
     </style>
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <script src="https://unpkg.com/@lottiefiles/lottie-interactivity@latest/dist/lottie-interactivity.min.js"></script>
 </head>
 <body>
    
-<lottie-player id="secondLottie" src="textanimation.json" background="transparent" style="width: 1280x; height: 720px;"
-    autoplay loop></lottie-player>
-    <lottie-player id="firstLottie" src="Comp 1.json" background="#ca1" style="width: 500x; height: 300px;"
-        controls></lottie-player>
-    <p>test</p>
-    <p>test</p>
-    <p>test</p>
-    <p>test</p>
-    <p>test</p>
-    <p>test</p>
-    <p>test</p>
- 
-<p>test</p>
-<p>test</p>
-<p>test</p>
-<p>test</p>
-<p>test</p>
-<p>test</p>
-<p>test</p>
-<p>test</p>
-<p>test</p>
-<p>test</p>
-<p>test</p>
-<p>test</p>
-<p>test</p>
-<p>test</p>
-<p>test</p>
-<p>test</p>
-<p>test</p>
-<p>test</p>
-<p>test</p>
-<p>test</p>
-<p>test</p>
-<p>test</p>
-<p>test</p>
-<p>test</p>
-       
+<lottie-player id="secondLottie" src="textanimation.json" background="transparent" style="width: 1280x; height: 720px;" autoplay loop></lottie-player>
+<lottie-player id="thirdLottie" src="bgr-img.json" background="transparent" style="width: 1280x; height: 720px;" autoplay loop></lottie-player>
+<lottie-player id="firstLottie" src="Comp 1.json" background="#ca1" style="width: 500x; height: 300px;"></lottie-player>
+      
         <script>
                LottieInteractivity.create({
                     player: '#firstLottie',
-                    mode: "scroll",
+                    mode: "cursor",
                     actions: [
                         {
                             visibility: [0, 1.0],
-                            type: "play"
-                     
+                            type: "click",
+                            forceFlag: false
                         }
                     ]
                 });
